@@ -1,3 +1,19 @@
 micronaut:
   application:
     name: fretes
+  server:
+    port: 8085
+
+#grpc:
+#  server:
+#    health:
+#      enable: true // default eh true
+
+endpoints:
+#  all:
+#    port: 8085
+#    sensitive: false
+  health:
+    enabled: true
+    sensitive: false # false acessivel pro usuarios nao autenticados, por default eh false, true acessivel por user autenticados
+    details-visible: ANONYMOUS # detalhes visiveis por qualquer pessoa
